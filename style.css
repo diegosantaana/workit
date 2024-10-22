@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces_144pt-SemiBold.ttf")
+    format("truetype");
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.container.column {
+  flex-direction: column;
+}
+.container__about {
+  flex-direction: column;
+}
+.container__services {
+  flex-direction: column;
+}
+header {
+  background-color: #24053e;
+  padding-top: 32px;
+}
+.btn {
+  font-family: "Manrope";
+  font-weight: 700;
+  line-height: 1.8;
+  cursor: pointer;
+}
+.btn__primary {
+  font-size: 16px;
+  color: #24053e;
+  background-color: #44ffa1;
+  padding: 12px 32px;
+  border: 2px solid transparent;
+}
+.btn__primary:hover {
+  background-color: transparent;
+  color: #44ffa1;
+  border: 2px solid #44ffa1;
+}
+
+.btn__secondary {
+  font-size: 18px;
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 3px solid #44ffa1;
+}
+.btn__secondary:hover {
+  color: #44ffa1;
+}
+.hero {
+  position: relative;
+  background-color: #24053e;
+  padding-top: 56px;
+  padding-bottom: calc(168px + 32 * (100vw - 375px) / 393);
+}
+.hero__tittle {
+  font-family: "Fraunces";
+  font-size: calc(48px + 12 * (100vw - 375px) / 393);
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.hero__tittle span {
+  border-bottom: 3px solid #44ffa1;
+}
+.hero__image {
+  position: absolute;
+  width: calc(300px + 180 * (100vw - 375px) / 393);
+  bottom: calc(-60px - 67 * (100vw - 375px) / 393);
+  z-index: 1;
+}
+.hero_left_ornamental,
+.hero_right_ornamental {
+  display: none;
+}
+.ornamental__image {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: calc(24px + 32 * (100vw - 375px) / 393);
+}
+.services {
+  padding-block: calc(144px + 48 * (100vw - 375px) / 393)
+    calc(88px + 28 * (100vw - 375px) / 393);
+  text-align: center;
+  background-color: #fcf8ff;
+  position: relative;
+}
+.service__number {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #584d62;
+  font-family: "Fraunces";
+  font-size: 20px;
+  color: #24053e;
+  border-radius: 50%;
+}
+.service__tittle {
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-weight: 600;
+  color: #24053e;
+  margin-block: 24px 16px;
+}
+.service__desc {
+  font-family: "Manrope";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #24053e;
+  max-width: 55ch;
+}
+.service:not(:last-child) {
+  margin-bottom: 32px;
+}
+.about {
+  padding-top: 112px;
+  position: relative;
+}
+.about__image {
+  width: 280px;
+}
+.about__right {
+  padding: 32px;
+  background-color: #24053e;
+  color: #fff;
+  text-align: center;
+  margin-top: -48px;
+}
+.about__tittle {
+  font-family: "Fraunces";
+  font-size: 32px;
+  font-weight: 600;
+}
+.about__desc {
+  font-family: "Manrope";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-block: 32px;
+}
+.ornamental__white {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+}
+.about_bottom_ornamental {
+  display: none;
+}
+footer {
+  padding-block: 80px;
+}
+.social__icons {
+  padding-top: 50px;
+  color: #584d62;
+}
+.icon__medio {
+  margin-inline: 24px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 200px;
+  }
+  .hero__tittle {
+    font-size: calc(60px + 20 * (100vw -768px) / 452);
+  }
+  .btn__primary {
+    font-size: 18px;
+  }
+  .hero__image {
+    width: 480px;
+    bottom: -127px;
+  }
+  .ornamental__image {
+    height: 56px;
+  }
+  .hero_left_ornamental {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -220px;
+  }
+  .hero_right_ornamental {
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    right: -80px;
+  }
+  .services {
+    padding-block: 192px 116px;
+  }
+  .service {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+  .service__number {
+    flex-shrink: 0;
+    font-size: 24px;
+  }
+  .service__content {
+    text-align: left;
+  }
+  .service__tittle {
+    font-size: 28px;
+    margin-block: 0 28px;
+  }
+
+  .ornamental__white {
+    height: 72px;
+  }
+  .container__about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about__right {
+    padding: 48px;
+    margin-block: 168px 0;
+    margin-left: -104px;
+    text-align: left;
+  }
+  .about__tittle {
+    font-size: 48px;
+  }
+  .about_bottom_ornamental {
+    display: block;
+    position: absolute;
+    right: 40px;
+    bottom: -110px;
+  }
+}
+@media screen and (min-width: 1220px) {
+  header {
+    padding-top: 56px;
+  }
+  .hero {
+    padding-bottom: 368px;
+  }
+  .hero__tittle {
+    font-size: 70px;
+  }
+  .hero__image {
+    width: 600px;
+    bottom: -147px;
+  }
+  .hero_left_ornamental {
+    top: 62px;
+    left: -100px;
+  }
+  .hero_right_ornamental {
+    bottom: 260px;
+    right: -45px;
+  }
+  .container {
+    max-width: 1000px;
+  }
+  .ornamental__image {
+    height: 72px;
+    width: 100%;
+  }
+  .services {
+    padding-block: 230px 100px;
+  }
+  .container__services {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .service {
+    flex-direction: column;
+    margin: 0;
+    gap: 32px;
+  }
+  .service__number {
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+  }
+  .service__tittle {
+    font-size: 32px;
+  }
+  .service__desc {
+    font-size: 18px;
+  }
+  .service:not(:last-child) {
+    margin: 0;
+  }
+  .service__content {
+    text-align: center;
+  }
+  .about__image {
+    width: 380px;
+  }
+  .about__right {
+    padding: 64px;
+    margin-left: -87px;
+  }
+  .about__tittle {
+    font-size: 56px;
+  }
+  .about__desc {
+    font-size: 16px;
+  }
+  .about_bottom_ornamental {
+    right: 210px;
+    bottom: -65px;
+  }
+}
