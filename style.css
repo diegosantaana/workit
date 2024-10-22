@@ -244,6 +244,9 @@ footer {
     font-size: 28px;
     margin-block: 0 28px;
   }
+  .about__image {
+    width: calc(280px + 100 * (100vw - 768px) / 452);
+  }
 
   .ornamental__white {
     height: 72px;
