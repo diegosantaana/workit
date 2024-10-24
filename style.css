@@ -159,7 +159,7 @@ header {
   width: 280px;
 }
 .about__right {
-  padding: 32px;
+  padding: calc(32px + 16 * (100vw - 375px) / 393);
   background-color: #24053e;
   color: #fff;
   text-align: center;
@@ -167,7 +167,7 @@ header {
 }
 .about__tittle {
   font-family: "Fraunces";
-  font-size: 32px;
+  font-size: calc(32px + 16 * (100vw - 375px) / 393);
   font-weight: 600;
 }
 .about__desc {
@@ -181,7 +181,7 @@ header {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 24px;
+  height: calc(24px + 48 * (100vw - 375px) / 393);
 }
 .about_bottom_ornamental {
   display: none;
@@ -198,35 +198,36 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding-bottom: 200px;
+    padding-bottom: calc(200px + 100 * (100vw - 768px) / 452);
   }
   .hero__tittle {
-    font-size: calc(60px + 20 * (100vw -768px) / 452);
+    font-size: calc(60px + 20 * (100vw - 768px) / 452);
   }
   .btn__primary {
     font-size: 18px;
   }
   .hero__image {
-    width: 480px;
-    bottom: -127px;
+    width: calc(480px + 120 * (100vw - 768px) / 452);
+    bottom: calc(-127px - 20 * (100vw - 768px) / 452);
   }
   .ornamental__image {
-    height: 56px;
+    height: calc(56px + 16 * (100vw - 768px) / 452);
   }
   .hero_left_ornamental {
     display: block;
     position: absolute;
-    top: 10px;
-    left: -220px;
+    top: calc(10px + 52 * (100vw - 768px) / 452);
+    left: calc(-220px + 120 * (100vw - 768px) / 452);
   }
   .hero_right_ornamental {
     display: block;
     position: absolute;
-    bottom: 70px;
-    right: -80px;
+    bottom: calc(70px + 190 * (100vw - 768px) / 452);
+    right: calc(-80px + 35 * (100vw - 768px) / 452);
   }
   .services {
-    padding-block: 192px 116px;
+    padding-block: calc(192px + 38 * (100vw - 768px) / 452)
+      calc(116px - 16 * (100vw - 768px) / 452);
   }
   .service {
     display: flex;
@@ -243,6 +244,9 @@ footer {
   .service__tittle {
     font-size: 28px;
     margin-block: 0 28px;
+  }
+  .service__desc {
+    max-width: 107ch;
   }
   .about__image {
     width: calc(280px + 100 * (100vw - 768px) / 452);
@@ -276,10 +280,10 @@ footer {
     padding-top: 56px;
   }
   .hero {
-    padding-bottom: 368px;
+    padding-bottom: 300px;
   }
   .hero__tittle {
-    font-size: 70px;
+    font-size: 80px;
   }
   .hero__image {
     width: 600px;
