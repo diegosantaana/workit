@@ -309,7 +309,8 @@ footer {
   }
   .container__services {
     flex-direction: row;
-    gap: 32px;
+    gap: 18px;
+    align-items: flex-start;
   }
   .service {
     flex-direction: column;
@@ -322,10 +323,10 @@ footer {
     height: 56px;
   }
   .service__tittle {
-    font-size: 32px;
+    font-size: 27px;
   }
   .service__desc {
-    font-size: 18px;
+    font-size: 17px;
   }
   .service:not(:last-child) {
     margin: 0;
